@@ -4,8 +4,9 @@ open Lake DSL
 package BlasterBenchmarks where
 
 -- Solvers
-require «Solver» from git
-  "https://github.com/input-output-hk/Lean-blaster" @ "main"
+-- Pinned to an exact commit (tip of `main` when pinned) so baseline runs are reproducible.
+require «Blaster» from git
+  "https://github.com/input-output-hk/Lean-blaster" @ "585c5fc1370196a03cfceec674f5a5ac2ed3c2f2"
 
 -- Tactics
 require smt from git "https://github.com/ufmg-smite/lean-smt.git" @ "main"
