@@ -42,8 +42,8 @@ TACTICS=("smt +model" "blaster" "auto" "aesop" "hammer")
 # Tactic-specific imports
 # Add entries here if a tactic requires a specific import
 declare -A TACTIC_IMPORTS=(
-    ["blaster"]="Solver.Command.Tactic"
-    ["blaster (only-optimize: 1)"]="Solver.Command.Tactic"
+    ["blaster"]="Blaster.Command.Tactic"
+    ["blaster (only-optimize: 1)"]="Blaster.Command.Tactic"
     ["auto"]="Auto.Tactic"
     ["hammer"]="Hammer"
     ["aesop"]="Aesop"

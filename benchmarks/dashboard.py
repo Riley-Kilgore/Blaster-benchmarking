@@ -751,7 +751,7 @@ tr:hover td{{background:rgba(255,255,255,.02)}}
         <h4>Your Lean4 file</h4>
         <div class="code-block">
           <div class="code-block-bar">MyProofs.lean</div>
-          <pre><span style="color:#c084fc">import</span> <span style="color:#b84032">Solver.Command.Tactic</span>
+          <pre><span style="color:#c084fc">import</span> <span style="color:#b84032">Blaster.Command.Tactic</span>
 
 <span style="color:#c084fc">theorem</span> <span style="color:#b84032">addComm</span> (a b : <span style="color:#7dd3fc">Nat</span>) :
     a + b = b + a := by

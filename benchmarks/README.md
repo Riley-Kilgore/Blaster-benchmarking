@@ -324,7 +324,7 @@ Add imports for custom tactics in `benchmark_config.sh`:
 
 ```bash
 declare -A TACTIC_IMPORTS=(
-    ["blaster"]="Solver.Command.Tactic"
+    ["blaster"]="Blaster.Command.Tactic"
     ["my_tactic"]="My.Custom.Import"
 )
 ```
