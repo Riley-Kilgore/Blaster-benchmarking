@@ -23,3 +23,6 @@ latest/__pycache__/
 **/__pycache__/
 latest/projects/
 latest/results_cache/
+# blaster baseline harness: pinned tools and run outputs
+/.tools/
+/results/
