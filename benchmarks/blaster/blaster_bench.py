@@ -3,7 +3,7 @@
 benchmark suites and write one JSON line per goal.
 
     blaster_bench.py check              verify the pinned environment, run nothing
-    blaster_bench.py suite <NAME> ...   run one suite (NNG4 STG4 ITL4 MiniF2F Verina UPLC)
+    blaster_bench.py suite <NAME> ...   run one suite (NNG4 STG4 ITL4 Verina UPLC)
     blaster_bench.py all                run all six suites
 
 Each goal is run in its own `lean` process on a copy of its source file in which
@@ -62,7 +62,7 @@ SUITES = {
         Suite("NNG4", ("BlasterBenchmarks/NNG4/NNG4.lean",), "file", 20),
         Suite("STG4", ("BlasterBenchmarks/STG4/STG4.lean",), "file", 20),
         Suite("ITL4", ("BlasterBenchmarks/ITL4/ITL4.lean",), "file", 20),
-        Suite("MiniF2F", ("BlasterBenchmarks/MiniF2F/MiniF2F.lean",), "file", 20),
+        # MiniF2F is a held-out suite: it is not on this branch (see README, "Held-out suites").
         Suite("Verina", ("BlasterBenchmarks/Verina",), "taskdir", 20, r"_spec_satisfied$"),
         Suite("UPLC", ("BlasterBenchmarks/UPLC/Width", "BlasterBenchmarks/UPLC/Depth"), "taskdir", 90, r"."),
     ]
