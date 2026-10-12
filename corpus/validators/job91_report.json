@@ -1,0 +1,28 @@
+{
+  "job": 91,
+  "step": "step 1 continuation: ak-equiv-check pin + end-to-end pair + corpus families",
+  "date": "2026-10-12",
+  "status": "blocked",
+  "blocker": {
+    "stage": "ak-equiv-check end-to-end pair (toolchain setup)",
+    "platform": "linux-aarch64",
+    "errors": [
+      "setup_toolchains.py: RuntimeError: no pinned Aiken compiler artifacts for linux-aarch64",
+      "profile run historical-regression-v1.1.22-v1.1.23: aikup installation for v1.1.23 not found under /home/agent/.aiken/versions/v1.1.23 (aarch64)"
+    ],
+    "missing_pins": ["compiler_pair.json old/new artifacts linux-aarch64", "blaster_config.json evaluator.artifacts linux-aarch64", "blaster_config.json solver_artifacts linux-aarch64"],
+    "unblock_options": ["owner-approved linux-aarch64 pins (upstream assets exist)", "run on linux-x86_64 or darwin-arm64 host"]
+  },
+  "heads": {
+    "lean-blaster": "ab82a3cb647cbdecc198202244622554e2464e4d",
+    "ak-equiv-check_base": "e0a530e7f99b64cac86b130a1dfb97ce154d38ec",
+    "PlutusCoreBlaster": "4ef48606303c45225d3ed2e2a87fc50280a763b7",
+    "CardanoLedgerApiBlaster": "577e3eb03b5be09354cfdb1c0d0c12e9e16541a0"
+  },
+  "pin_change": {"repo": "ak-equiv-check", "branch": "agent/job91-blaster-pin-ab82a3c", "from": "402f6d22c1fc42e6e26255faac77e15b2450e4ab", "to": "ab82a3cb647cbdecc198202244622554e2464e4d", "files": ["tool/blaster_config.json", "tool/blaster-backend/lakefile.lean", "tool/blaster-backend/lake-manifest.json"], "pushed": false},
+  "unit_tests": {"with_pin": {"ran": 124, "failures": 1, "errors": 17}, "untouched_main": {"ran": 124, "failures": 1, "errors": 17}, "identical_failing_set": true, "cause": "no pinned compiler artifact for linux-aarch64"},
+  "team_failures_provided": "none (sources/ does not exist)",
+  "families_produced": 0,
+  "owner_signoff": "pending",
+  "commands_log": "logs/commands.tsv"
+}

@@ -1,0 +1,31 @@
+⚠ [103/352] Replayed PlutusCore.UPLC.CekMachine
+warning: PlutusCore/UPLC/CekMachine.lean:312:4: declaration uses 'sorry'
+ℹ [336/352] Built Tests.Scripts.HelloWorld.HelloWorld (2.4s)
+info: Tests/Scripts/HelloWorld/HelloWorld.lean:7:0: Successfully decoded single CBOR hex 'Tests/Scripts/HelloWorld/hello_world.flat'
+ℹ [339/352] Built Tests.Scripts.UnlockPIN.UnlockPIN (2.4s)
+info: Tests/Scripts/UnlockPIN/UnlockPIN.lean:8:0: Successfully decoded single CBOR hex 'Tests/Scripts/UnlockPIN/unlock_pin.flat'
+ℹ [340/352] Built Tests.Recursor (3.5s)
+info: Tests/Recursor.lean:17:39: ✅ Valid
+info: Tests/Recursor.lean:17:39: ✅ Valid
+info: Tests/Recursor.lean:24:38: ✅ Valid
+info: Tests/Recursor.lean:24:38: ✅ Valid
+info: Tests/Recursor.lean:32:38: ✅ Valid
+info: Tests/Recursor.lean:32:38: ✅ Valid
+info: Tests/Recursor.lean:42:23: ✅ Valid
+info: Tests/Recursor.lean:42:23: ✅ Valid
+info: Tests/Recursor.lean:49:23: ✅ Valid
+info: Tests/Recursor.lean:49:23: ✅ Valid
+ℹ [341/352] Built Tests.Scripts.ParamFeed.ParamFeed (4.9s)
+info: Tests/Scripts/ParamFeed/ParamFeed.lean:14:0: Successfully decoded flat hex 'Tests/Scripts/ParamFeed/param_feed.flat'
+ℹ [342/352] Built Tests.Scripts.ParamFeed.Properties (2.3s)
+info: Tests/Scripts/ParamFeed/Properties.lean:20:63: ✅ Valid
+ℹ [343/352] Built Tests.Functions.Fibonacci.Fibonacci (38s)
+info: Tests/Functions/Fibonacci/Fibonacci.lean:14:0: Successfully decoded single CBOR hex 'Tests/Functions/Fibonacci/fibonacci_naive.flat'
+info: Tests/Functions/Fibonacci/Fibonacci.lean:16:0: Successfully decoded single CBOR hex 'Tests/Functions/Fibonacci/fibonacci_size.flat'
+info: Tests/Functions/Fibonacci/Fibonacci.lean:25:11: ✅ Valid
+info: Tests/Functions/Fibonacci/Fibonacci.lean:28:11: ✅ Valid
+info: Tests/Functions/Fibonacci/Fibonacci.lean:36:23: ✅ Valid
+info: Tests/Functions/Fibonacci/Fibonacci.lean:41:111: ✅ Valid
+✔ [344/352] Built Tests.Functions (1.4s)
+ℹ [345/352] Built Tests.Scripts.SellNFT.SellNFT (163s)
+info: Tests/Scripts/SellNFT/SellNFT.lean:7:0: Successfully decoded single CBOR hex 'Tests/Scripts/SellNFT/sell_nft.flat'

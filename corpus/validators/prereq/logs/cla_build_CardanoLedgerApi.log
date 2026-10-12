@@ -1,0 +1,26 @@
+info: CardanoLedgerApi: no previous manifest, creating one from scratch
+info: toolchain not updated; already up-to-date
+⚠ [103/341] Replayed PlutusCore.UPLC.CekMachine
+warning: PlutusCore/UPLC/CekMachine.lean:312:4: declaration uses 'sorry'
+✔ [320/341] Built CardanoLedgerApi.IsData.Class (346ms)
+✔ [321/341] Built CardanoLedgerApi.Recursors (1.1s)
+✔ [322/341] Built CardanoLedgerApi.V1.Scripts (953ms)
+✔ [323/341] Built CardanoLedgerApi.V3.Tx (1.3s)
+✔ [324/341] Built CardanoLedgerApi.V1.Time (2.1s)
+✔ [325/341] Built CardanoLedgerApi.V1.Credential (1.4s)
+✔ [326/341] Built CardanoLedgerApi.V1.Value (2.8s)
+✔ [327/341] Built CardanoLedgerApi.V1.Address (624ms)
+✔ [328/341] Built CardanoLedgerApi.V1.DCert (1.5s)
+✔ [329/341] Built CardanoLedgerApi.V1.Tx (962ms)
+✔ [330/341] Built CardanoLedgerApi.V2.Tx (742ms)
+✔ [331/341] Built CardanoLedgerApi.V1.Contexts (1.8s)
+✔ [332/341] Built CardanoLedgerApi.V1 (348ms)
+✔ [333/341] Built CardanoLedgerApi.V2.Contexts (1.3s)
+✔ [334/341] Built CardanoLedgerApi.V2 (327ms)
+✔ [335/341] Built CardanoLedgerApi.V3.TxCert (4.3s)
+✔ [336/341] Built CardanoLedgerApi.V3.Governance (691ms)
+✔ [337/341] Built CardanoLedgerApi.V3.Contexts (2.0s)
+✔ [338/341] Built CardanoLedgerApi.V3 (368ms)
+✔ [339/341] Built CardanoLedgerApi.Basic (359ms)
+✔ [340/341] Built CardanoLedgerApi (338ms)
+Build completed successfully (341 jobs).

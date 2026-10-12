@@ -1,0 +1,8 @@
+# cwd: /workspace/ak-equiv-check/tool
+# cmd: /tmp/akvenv/bin/equiv-checker profile run historical-regression-v1.1.22-v1.1.23 --strict
+# bound: 1800s
+# start: 2026-10-12T15:27:22Z
+aikup installation for v1.1.23 not found under /home/agent/.aiken/versions/v1.1.23 (aarch64)
+# exit: 1
+# seconds: 0.06
+# live lean/z3/lake/aiken survivors after run: 0
