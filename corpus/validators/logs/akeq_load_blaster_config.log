@@ -1,0 +1,22 @@
+# cwd: /workspace/ak-equiv-check/tool
+# cmd: /tmp/akvenv/bin/python -c from pathlib import Path; from equiv_checker.config import load_blaster_config; load_blaster_config(Path('blaster_config.json'))
+# bound: 60s
+# start: 2026-10-12T15:27:30Z
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from pathlib import Path; from equiv_checker.config import load_blaster_config; load_blaster_config(Path('blaster_config.json'))
+                                                                                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 270, in load_blaster_config
+    evaluator = _load_evaluator_config(
+        value.get("evaluator"), evaluator_executable
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 229, in _load_evaluator_config
+    executable = _installed_aiken("new", str(value["release"]))
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 134, in _installed_aiken
+    raise FileNotFoundError(
+        f"aikup installation for {release} not found under {version_root} ({machine})"
+    )
+FileNotFoundError: aikup installation for v1.1.23 not found under /home/agent/.aiken/versions/v1.1.23 (aarch64)
+# exit: 1
+# seconds: 0.04
+# live lean/z3/lake/aiken survivors after run: 0

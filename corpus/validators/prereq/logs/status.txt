@@ -1,0 +1,5 @@
+lake build PlutusCore exit=0 secs=32
+lake build Lemmas exit=0 secs=6
+lake build CardanoLedgerApi exit=0 secs=18
+PlutusCore: lake build Tests exit=0 secs=84
+CardanoLedgerApi: LEAN_NUM_THREADS=5 lake build Tests exit=124 secs=1200

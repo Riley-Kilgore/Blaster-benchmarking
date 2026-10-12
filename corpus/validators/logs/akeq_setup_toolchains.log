@@ -1,0 +1,14 @@
+# cwd: /workspace/ak-equiv-check
+# cmd: python3 scripts/setup_toolchains.py
+# bound: 300s
+# start: 2026-10-12T15:27:22Z
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/scripts/setup_toolchains.py", line 124, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/workspace/ak-equiv-check/scripts/setup_toolchains.py", line 113, in main
+    raise RuntimeError(f"no pinned Aiken compiler artifacts for {key}")
+RuntimeError: no pinned Aiken compiler artifacts for linux-aarch64
+# exit: 1
+# seconds: 0.04
+# live lean/z3/lake/aiken survivors after run: 0

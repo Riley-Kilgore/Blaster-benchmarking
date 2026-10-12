@@ -1,0 +1,17 @@
+⚠ [96/217] Replayed PlutusCore.UPLC.CekMachine
+warning: PlutusCore/UPLC/CekMachine.lean:312:4: declaration uses 'sorry'
+✔ [312/326] Built Cryptograph.Sha2.Sha512TestVectors (1.5s)
+✔ [313/326] Built Cryptograph.Blake2b.Blake2bTestVectors (2.2s)
+✔ [314/326] Built Cryptograph.Sha3.Sha3_256TestVectors (2.1s)
+✔ [315/326] Built Cryptograph.Ripemd.Ripemd160TestVectors (2.3s)
+✔ [316/326] Built PlutusCore.Bitwise.Tests (2.6s)
+✔ [317/326] Built Cryptograph.Keccak.Keccak256TestVectors (3.3s)
+✔ [318/326] Built PlutusCore.Cbor.Tests (3.3s)
+✔ [319/326] Built PlutusCore.UPLC.FlatEncoding.Tests (9.5s)
+✔ [320/326] Built Cryptograph.Sha2.Sha256TestVectors (12s)
+✔ [321/326] Built PlutusCore.UPLC.ScriptEncoding.Tests (23s)
+✔ [322/326] Built PlutusCore.UPLC.TextEncoding.Tests (38s)
+✔ [323/326] Built Cryptograph.BLS12_381.TestVectors (82s)
+✔ [324/326] Built Tests.Basic (526ms)
+✔ [325/326] Built Tests (327ms)
+Build completed successfully (326 jobs).

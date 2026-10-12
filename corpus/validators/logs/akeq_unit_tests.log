@@ -1,0 +1,381 @@
+# cwd: /workspace/ak-equiv-check/tool
+# cmd: env PYTHONPATH=/workspace/ak-equiv-check/tool/tests /tmp/akvenv/bin/python -m unittest tests.test_blaster tests.test_cli tests.test_corpus tests.test_gate tests.test_pairing tests.test_runner tests.test_semantics tests.test_blueprints tests.test_compiler_artifacts tests.test_profiles tests.test_evidence tests.test_candidate tests.test_baseline
+# bound: 900s
+# start: 2026-10-12T15:27:04Z
+............no pinned compiler artifact for linux-aarch64
+F.....E...............EEE.EEEE.EE.EEEEEEE................HEAD is now at 10e8995 initial
+......Preparing worktree (detached HEAD 10e8995)
+..................................................
+======================================================================
+ERROR: test_locked_local_corpus_runs_generic_package_path (tests.test_corpus.CorpusRunnerTests.test_locked_local_corpus_runs_generic_package_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_corpus.py", line 61, in test_locked_local_corpus_runs_generic_package_path
+    compilers = compiler_pair(old_aiken=old, new_aiken=new)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_arbitrary_same_version_binaries_remain_old_and_new (tests.test_runner.PackageRunnerTests.test_arbitrary_same_version_binaries_remain_old_and_new)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 54, in test_arbitrary_same_version_binaries_remain_old_and_new
+    pair = self._compilers(root, [validator()], [validator()])
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_build_failures_are_labeled_separately (tests.test_runner.PackageRunnerTests.test_build_failures_are_labeled_separately)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 425, in test_build_failures_are_labeled_separately
+    pair = self._compilers(
+        root, [validator()], [validator()], old_exit=7, new_exit=0
+    )
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_dynamic_validator_counts_have_no_fixed_schema_constant (tests.test_runner.PackageRunnerTests.test_dynamic_validator_counts_have_no_fixed_schema_constant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 373, in test_dynamic_validator_counts_have_no_fixed_schema_constant
+    pair = self._compilers(root, rows, list(reversed(rows)))
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_force_only_pair_preserves_unselected_evidence (tests.test_runner.PackageRunnerTests.test_force_only_pair_preserves_unselected_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 336, in test_force_only_pair_preserves_unselected_evidence
+    compilers = self._compilers(root, old_rows, new_rows)
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_identical_scripts_pass_without_calling_blaster (tests.test_runner.PackageRunnerTests.test_identical_scripts_pass_without_calling_blaster)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 167, in test_identical_scripts_pass_without_calling_blaster
+    pair = self._compilers(root, [validator()], [validator()])
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_local_source_provenance_separates_same_binary_runs (tests.test_runner.PackageRunnerTests.test_local_source_provenance_separates_same_binary_runs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 66, in test_local_source_provenance_separates_same_binary_runs
+    pair = self._compilers(root, [validator()], [validator()])
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_logical_ids_are_stable_across_absolute_package_paths (tests.test_runner.PackageRunnerTests.test_logical_ids_are_stable_across_absolute_package_paths)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 237, in test_logical_ids_are_stable_across_absolute_package_paths
+    compilers = self._compilers(root, [validator()], [validator()])
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_missing_and_malformed_blueprints_are_distinct (tests.test_runner.PackageRunnerTests.test_missing_and_malformed_blueprints_are_distinct) (mode='missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 501, in test_missing_and_malformed_blueprints_are_distinct
+    compilers = compiler_pair(
+        old_aiken=old,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_missing_and_malformed_blueprints_are_distinct (tests.test_runner.PackageRunnerTests.test_missing_and_malformed_blueprints_are_distinct) (mode='malformed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 501, in test_missing_and_malformed_blueprints_are_distinct
+    compilers = compiler_pair(
+        old_aiken=old,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_missing_lock_is_explicit_strict_reproducibility_gap (tests.test_runner.PackageRunnerTests.test_missing_lock_is_explicit_strict_reproducibility_gap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 524, in test_missing_lock_is_explicit_strict_reproducibility_gap
+    pair = self._compilers(root, [validator()], [validator()])
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_new_build_failure_has_its_own_status (tests.test_runner.PackageRunnerTests.test_new_build_failure_has_its_own_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 445, in test_new_build_failure_has_its_own_status
+    pair = self._compilers(
+        root, [validator()], [validator()], old_exit=0, new_exit=9
+    )
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_repeated_runs_keep_identity_and_structure (tests.test_runner.PackageRunnerTests.test_repeated_runs_keep_identity_and_structure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 205, in test_repeated_runs_keep_identity_and_structure
+    pair = self._compilers(root, [validator()], [validator()])
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_replayed_falsification_becomes_confirmed_non_equivalent (tests.test_runner.PackageRunnerTests.test_replayed_falsification_becomes_confirmed_non_equivalent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 572, in test_replayed_falsification_becomes_confirmed_non_equivalent
+    pair = self._compilers(
+        root,
+        [validator(compiled_code=IDENTITY_HEX)],
+        [validator(compiled_code=ZERO_HEX)],
+    )
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_resume_reuses_valid_pairs_and_reruns_only_corrupt_evidence (tests.test_runner.PackageRunnerTests.test_resume_reuses_valid_pairs_and_reruns_only_corrupt_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 286, in test_resume_reuses_valid_pairs_and_reruns_only_corrupt_evidence
+    compilers = self._compilers(root, old_rows, new_rows)
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_strict_gate_rejects_every_nonpassing_semantic_status (tests.test_runner.PackageRunnerTests.test_strict_gate_rejects_every_nonpassing_semantic_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 548, in test_strict_gate_rejects_every_nonpassing_semantic_status
+    pair = self._compilers(
+        root,
+        [validator(compiled_code=IDENTITY_HEX)],
+        [validator(compiled_code=ZERO_HEX)],
+    )
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 44, in _compilers
+    return compiler_pair(
+        old_aiken=old_path,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+ERROR: test_uplc_extraction_failure_has_its_own_status (tests.test_runner.PackageRunnerTests.test_uplc_extraction_failure_has_its_own_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_runner.py", line 469, in test_uplc_extraction_failure_has_its_own_status
+    compilers = compiler_pair(
+        old_aiken=old,
+    ...<2 lines>...
+        new_revision="new-revision",
+    )
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 207, in compiler_pair
+    else _compiler("old", pair["old"], old_aiken, old_revision),
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 155, in _compiler
+    expected_hash = _configured_binary_hash(configured)
+  File "/workspace/ak-equiv-check/tool/equiv_checker/config.py", line 100, in _configured_binary_hash
+    raise ValueError(f"no pinned compiler artifact for {key}")
+ValueError: no pinned compiler artifact for linux-aarch64
+
+======================================================================
+FAIL: test_compare_accepts_arbitrary_same_version_compiler_paths_and_revisions (tests.test_cli.CompilerOverrideCliTests.test_compare_accepts_arbitrary_same_version_compiler_paths_and_revisions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ak-equiv-check/tool/tests/test_cli.py", line 45, in test_compare_accepts_arbitrary_same_version_compiler_paths_and_revisions
+    self.assertEqual(exit_code, 0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 124 tests in 2.680s
+
+FAILED (failures=1, errors=17)
+# exit: 1
+# seconds: 2.78
+# live lean/z3/lake/aiken survivors after run: 0

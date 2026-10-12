@@ -1,0 +1,27 @@
+{
+  "job": 91,
+  "step": "pass 5 step 1: integration prerequisite",
+  "date": "2026-10-12",
+  "heads": {
+    "lean-blaster": "ab82a3cb647cbdecc198202244622554e2464e4d",
+    "Blaster-benchmarking": "ea924d4476cc41118d42d7605a3b15c43e90a83a",
+    "ak-equiv-check": "e0a530e7f99b64cac86b130a1dfb97ce154d38ec",
+    "PlutusCoreBlaster": "4ef48606303c45225d3ed2e2a87fc50280a763b7",
+    "CardanoLedgerApiBlaster": "577e3eb03b5be09354cfdb1c0d0c12e9e16541a0"
+  },
+  "toolchain": {"lean": "4.24.0 (797c613eb9b6, aarch64-unknown-linux-gnu)", "lake": "5.0.0-src+797c613", "z3": "5.1.0"},
+  "dependency_resolution": "path overlays in disposable git-archive copies; no network, no clones",
+  "results": [
+    {"repo": "PlutusCoreBlaster", "cmd": "timeout 1200 lake build PlutusCore", "exit": 0, "secs": 32, "log": "logs/pc_build_PlutusCore.log"},
+    {"repo": "PlutusCoreBlaster", "cmd": "timeout 1200 lake build Lemmas", "exit": 0, "secs": 6, "log": "logs/pc_build_Lemmas.log"},
+    {"repo": "CardanoLedgerApiBlaster", "cmd": "timeout 1200 lake build CardanoLedgerApi", "exit": 0, "secs": 18, "log": "logs/cla_build_CardanoLedgerApi.log"},
+    {"repo": "PlutusCoreBlaster", "cmd": "timeout 1200 lake build Tests", "exit": 0, "secs": 84, "log": "logs/pc_build_Tests.log"},
+    {"repo": "CardanoLedgerApiBlaster", "cmd": "LEAN_NUM_THREADS=5 timeout 1200 lake build Tests", "exit": 124, "secs": 1200, "log": "logs/cla_build_Tests.log",
+     "note": "timed out, no errors; 8/13 test modules built (15 Valid, 0 Falsified/Undetermined); unfinished: Tests.Scripts.{HelloWorld,SellNFT,UnlockPIN}.Properties and aggregators Tests.Scripts, Tests.Basic, Tests"}
+  ],
+  "verdict": {
+    "PlutusCoreBlaster": "PASS (library + Lemmas + Tests)",
+    "CardanoLedgerApiBlaster": "PASS library build; Tests INCONCLUSIVE (1200s bound reached, no error)",
+    "incompatibility_found": false
+  }
+}
